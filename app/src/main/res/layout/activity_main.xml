@@ -4,15 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/global_padding"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="curr_user"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btnChangeUser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/medium_text_size"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        />
+
+    <TextView
+        android:id="@+id/tvCurrUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="textView"
+        app:layout_constraintRight_toLeftOf="@id/btnChangeUser"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="@dimen/medium_text_size"
+        />
+
+    <Button
+        android:id="@+id/btnChangeUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnChangeUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/etUsername"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="@dimen/small_text_size"
+        android:foreground="?selectableItemBackground"
+        />
+
+    <ImageView
+        android:id="@+id/ivCoverArt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cover_description"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/astronaut_in_the_ocean" />
+
+    <TextView
+        android:id="@+id/tvSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="@string/songName"
+        android:textSize="@dimen/large_text_size"
+        app:layout_constraintTop_toBottomOf="@id/ivCoverArt"
+
+        />
+
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/songArtistName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintTop_toBottomOf="@id/tvSongName"
+        />
+
+    <TextView
+        android:id="@+id/tvNumPlays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text=""
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistName"
+
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/tvArtistBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tvNumPlays"
+        />
+
+    <ImageButton
+        android:id="@+id/ibPrevBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_previous"
+        android:background="@android:color/transparent"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistBarrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/ibPlayBtn"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        />
+
+    <ImageButton
+        android:id="@+id/ibPlayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:background="@android:color/transparent"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistBarrier"
+        app:layout_constraintLeft_toRightOf="@id/ibPrevBtn"
+        app:layout_constraintRight_toLeftOf="@id/ibNextBtn"
+        />
+
+    <ImageButton
+        android:id="@+id/ibNextBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:background="@android:color/transparent"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/tvArtistBarrier"
+        app:layout_constraintLeft_toRightOf="@id/ibPlayBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
