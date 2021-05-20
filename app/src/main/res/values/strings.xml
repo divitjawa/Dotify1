@@ -4,4 +4,5 @@
     <string name="cover_description">This is the cover art showing the song</string>
     <string name="songName">Astronaut In The Ocean</string>
     <string name="songArtistName">Masked Wolf</string>
+    <string name="apply">Apply</string>
 </resources>
