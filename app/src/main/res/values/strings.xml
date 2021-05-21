@@ -5,4 +5,8 @@
     <string name="songName">Astronaut In The Ocean</string>
     <string name="songArtistName">Masked Wolf</string>
     <string name="apply">Apply</string>
+    <string name="previous_button">previous button</string>
+    <string name="play_button">play button</string>
+    <string name="next_button">next button</string>
+    <string name="curr_user_placeholder">curr_user</string>
 </resources>

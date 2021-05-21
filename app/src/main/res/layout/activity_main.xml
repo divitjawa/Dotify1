@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:textColor="@color/spotify_green"
         android:layout_height="wrap_content"
-        android:text="curr_user"
+        android:text=""
         app:layout_constraintTop_toTopOf="@id/btnChangeUser"
         app:layout_constraintBottom_toBottomOf="@id/btnChangeUser"
         app:layout_constraintRight_toLeftOf="@id/btnChangeUser"
@@ -29,7 +29,7 @@
         android:textColor="@color/spotify_green"
         app:layout_constraintTop_toTopOf="@id/btnChangeUser"
         app:layout_constraintBottom_toBottomOf="@id/btnChangeUser"
-        android:text="textView"
+        android:text="@string/curr_user_placeholder"
         app:layout_constraintRight_toLeftOf="@id/btnChangeUser"
         app:layout_constraintStart_toStartOf="parent"
         android:textSize="@dimen/medium_text_size"
@@ -122,6 +122,7 @@
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="@id/ibPlayBtn"
         app:layout_constraintHorizontal_chainStyle="spread"
+        android:contentDescription="@string/previous_button"
         />
 
     <ImageButton
@@ -134,6 +135,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvArtistBarrier"
         app:layout_constraintLeft_toRightOf="@id/ibPrevBtn"
         app:layout_constraintRight_toLeftOf="@id/ibNextBtn"
+        android:contentDescription="@string/play_button"
         />
 
     <ImageButton
@@ -148,6 +150,7 @@
         app:layout_constraintTop_toBottomOf="@id/tvArtistBarrier"
         app:layout_constraintLeft_toRightOf="@id/ibPlayBtn"
         app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/next_button"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
